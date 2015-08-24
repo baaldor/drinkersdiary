@@ -2,15 +2,19 @@ package drinkerdiary.Core;
 
 public class Volume extends SimpleMeasure {
 
-    public static Volume getShot() {
-        throw new UnsupportedOperationException("Not supported yet.");
+	public Volume(double value, Unit unit){
+		super(value, unit);
+	}
+	
+	public Volume(double value){
+		super(value,Unit.MILLILITER);
+	}
+	
+    public static Volume createShot() {
+        return new Volume(20);
     }
 
-    public static Volume getDoubleShot() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    public Volume(double value, Unit unit) {
-        super(value, unit);
-    }
+    public static Volume createDoubleShot() {
+        return new Volume(40);
+    }    
 }

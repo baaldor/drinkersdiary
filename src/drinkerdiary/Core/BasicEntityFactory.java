@@ -20,5 +20,12 @@ public class BasicEntityFactory extends EntityFactory{
     public Substance createNewSubstance() {
         return new SubstanceImpl();
     }
+
+	@Override
+	public AlcoholicSubstance createNewAlcoholicSubstance() {
+		return new AlcoholicSubstanceImpl();
+	}
+    
+    
     
 }

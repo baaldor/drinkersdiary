@@ -12,4 +12,5 @@ package drinkerdiary.Core;
 public abstract class EntityFactory {
     public abstract Drinker createNewDrinker();
     public abstract Substance createNewSubstance();
+    public abstract AlcoholicSubstance createNewAlcoholicSubstance();
 }

@@ -1,12 +1,17 @@
 package drinkerdiary.Core;
 
-import java.util.List;
+import java.util.Set;
 
 public interface Recipe {
+	public String getName();
+	public Recipe setName(String name);
 
-    public List<Ingredient> getIngredients();
+    public Set<Ingredient> getIngredients();
+    public Recipe setIngredients(Set<Ingredient> ingredients);
 
-    public String hasIngredient(String name);
+    public boolean hasIngredient(String name);
 
-    public String getQuantityForIngredient(String name);
+    public Measurable getQuantityForIngredient(String name);
+    
+    public Recipe addIngredient(Ingredient ingredient);
 }

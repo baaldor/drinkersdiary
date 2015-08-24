@@ -1,24 +1,17 @@
 package drinkerdiary.Core;
 
-public class Drink {
+public interface Drink {
 
-    private Recipe theDrinksRecipe;
+	Recipe getRecipe();
 
-    private String theDrinksName;
+	Drink setRecipe(Recipe theRecipe);
 
-    public Recipe getRecipe() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+	String getName();
 
-    public String getName() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+	Drink setName(String name);
 
-    public Measurable getTotalQuantity() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+	Volume getTotalQuantity();
 
-    public Measurable setTotalQuantity(Measurable q) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+	Drink setTotalQuantity(Volume q);
+
 }

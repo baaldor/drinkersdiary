@@ -2,5 +2,5 @@ package drinkerdiary.Core;
 
 public enum Unit {
 
-    MILLILITER, GRAMM, PCS
+	DASH, MILLILITER, GRAMM, PCS, TEASPOON
 }

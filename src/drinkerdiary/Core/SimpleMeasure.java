@@ -10,10 +10,15 @@ public class SimpleMeasure implements Measurable {
     }
 
     public double getValue() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return this.myValue;
     }
 
     public Unit getUnit() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return this.myUnit;
     }
+
+	@Override
+	public void setValue(double v) {
+		this.myValue=v;		
+	}
 }
