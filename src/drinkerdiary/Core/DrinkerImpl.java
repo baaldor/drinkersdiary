@@ -6,6 +6,7 @@
 package drinkerdiary.Core;
 
 import java.util.Collection;
+import java.util.Collections;
 
 /**
  *
@@ -16,11 +17,11 @@ public class DrinkerImpl implements Drinker {
     private Collection<Diary> myDiaries;
 
     public DrinkerImpl() {
-        this.name="A new drinker";
+        this("A new drinker");
     }
 
     public DrinkerImpl(String name) {
-        this.name = name;
+    	this.setName(name);
     }    
 
     @Override
@@ -30,16 +31,27 @@ public class DrinkerImpl implements Drinker {
 
     @Override
     public void setName(String name) {
-        this.name = name;
+    	if(name==null){
+    		throw new IllegalArgumentException("Name must not be null!");
+    	}
+    	else
+    		this.name = name;
     }    
 
     @Override
     public Collection<Diary> getMyDiaries() {
-        return this.myDiaries;
+    	if (this.myDiaries==null) 
+    		return Collections.emptySet();
+    	else
+    		return this.myDiaries;
     }
 
     @Override
     public void setMyDiaries(Collection<Diary> myDiaries) {
-        this.myDiaries = myDiaries;
+        if(myDiaries==null){
+        	throw new IllegalArgumentException("myDiaries must not be null!");
+        }
+        else
+        	this.myDiaries = myDiaries;
     }    
 }

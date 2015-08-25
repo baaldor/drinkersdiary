@@ -18,7 +18,11 @@ public class DrinkImpl implements Drink {
 	 */
     @Override
 	public DrinkImpl setRecipe(Recipe theRecipe){
-    	this.theDrinksRecipe=theRecipe;
+    	if(theRecipe==null)
+    		throw new IllegalArgumentException("Recipe must not be null!");
+    	else
+    		this.theDrinksRecipe=theRecipe;
+    	
     	return this;
     }
 
@@ -35,7 +39,11 @@ public class DrinkImpl implements Drink {
 	 */
     @Override
 	public DrinkImpl setName(String name){
-    	this.theDrinksName=name;
+    	if(name==null)
+    		throw new IllegalArgumentException("Name must not be null!");
+    	else
+    		this.theDrinksName=name;
+    	
     	return this;
     }
 
@@ -52,7 +60,11 @@ public class DrinkImpl implements Drink {
 	 */
     @Override
 	public DrinkImpl setTotalQuantity(Volume q) {
-        this.theDrinksTotalQuantity=q;
+    	if(q==null)
+    		throw new IllegalArgumentException("Volume must not be null!");
+    	else
+    		this.theDrinksTotalQuantity=q;
+    	
         return this;
     }
 }

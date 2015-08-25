@@ -13,16 +13,20 @@ public class SubstanceImpl implements Substance{
     private String name;
 
     public SubstanceImpl() {
-        this.name="A new Substance";
+        this("A new Substance");
     }
     
     public SubstanceImpl(String name) {
-        this.name = name;
+        this.setName(name);
     }
 
     @Override
     public void setName(String name) {
-        this.name = name;
+    	if(name==null){
+    		throw new IllegalArgumentException("Name must not be null!");
+    	}
+    	else
+    		this.name = name;
     }
     
     @Override

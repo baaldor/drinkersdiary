@@ -7,6 +7,16 @@ public class SimpleMeasure implements Measurable {
     private Unit myUnit;
 
     public SimpleMeasure(double value, Unit unit) {
+    	if(unit==null)
+    		throw new IllegalArgumentException("Unit must not be null!");
+    	else
+    		this.myUnit=unit;
+    	
+    	this.myValue=value;
+    }
+    
+    public SimpleMeasure(Unit unit){
+    	this(0,unit);
     }
 
     public double getValue() {

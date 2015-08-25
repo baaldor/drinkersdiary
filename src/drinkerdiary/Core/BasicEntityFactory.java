@@ -25,7 +25,30 @@ public class BasicEntityFactory extends EntityFactory{
 	public AlcoholicSubstance createNewAlcoholicSubstance() {
 		return new AlcoholicSubstanceImpl();
 	}
-    
-    
-    
+
+	@Override
+	public Ingredient createNewIngredient(Substance s, Measurable quantity, boolean isOptionalIngredient) {
+		return new IngredientImpl(s, quantity, isOptionalIngredient);
+	}
+
+	@Override
+	public Measurable createNewMeasurable(Unit theUnit) {
+		return new SimpleMeasure(theUnit);
+	}
+
+	@Override
+	public Volume createNewMilliliterVolume(double value) {
+		return new Volume(value);
+	}
+
+	@Override
+	public Piece createPiece(double value) {
+		return new Piece(value);
+	}
+
+	@Override
+	public Mass crateNewGrammMass(double value) {
+		return new Mass(value);
+	}
+	
 }
