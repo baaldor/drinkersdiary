@@ -1,5 +1,7 @@
 package drinkerdiary.Core;
 
+import drinkerdiary.Core.impl.Volume;
+
 public interface Drink {
 
 	Recipe getRecipe();

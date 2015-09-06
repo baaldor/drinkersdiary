@@ -1,4 +1,7 @@
-package drinkerdiary.Core;
+package drinkerdiary.Core.impl;
+
+import drinkerdiary.Core.Unit;
+import drinkerdiary.Core.impl.SimpleMeasure;
 
 public class Piece extends SimpleMeasure {
     

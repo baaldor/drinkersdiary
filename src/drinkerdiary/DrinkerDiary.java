@@ -5,13 +5,13 @@
  */
 package drinkerdiary;
 
-import drinkerdiary.Core.BasicEntityFactory;
+import drinkerdiary.Core.impl.BasicEntityFactory;
 import drinkerdiary.Core.EntityFactory;
 import drinkerdiary.presentation.FXMLDocumentController;
 import drinkerdiary.business.BusinessFacade;
 import drinkerdiary.business.BusinessFacadeImpl;
 import drinkerdiary.data.DataFacade;
-import drinkerdiary.data.DataFacadeImpl;
+import drinkerdiary.data.impl.DataFacadeImpl;
 import drinkerdiary.data.LoadFacade;
 import drinkerdiary.data.PersistenceFacade;
 import drinkerdiary.data.mock.LoadMock;

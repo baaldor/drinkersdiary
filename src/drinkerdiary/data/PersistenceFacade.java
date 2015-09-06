@@ -1,6 +1,6 @@
 package drinkerdiary.data;
 
-import drinkerdiary.Core.Diary;
+import drinkerdiary.Core.impl.DiaryImpl;
 import drinkerdiary.Core.Drinker;
 import drinkerdiary.Core.Recipe;
 import drinkerdiary.Core.Substance;

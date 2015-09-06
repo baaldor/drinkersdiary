@@ -1,71 +1,32 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package drinkerdiary.Core;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import drinkerdiary.Core.impl.ConsumptionImpl;
+import drinkerdiary.Core.impl.DiaryImpl;
 import java.util.List;
 
-public class Diary {
-    private List<Consumption> consumedDrinks;
-    private Drinker theDrinker;
-    private String diaryName;
+/**
+ *
+ * @author BaalDor
+ */
+public interface Diary {
 
-    public Diary(Drinker theDrinker, String diaryName) {
-    }
+    DiaryImpl addConsumption(ConsumptionImpl c);
 
-    public String getName() {
-        return this.diaryName;
-    }
-    
-    public Diary setName(String name){
-    	if(name==null){
-    		throw new IllegalArgumentException("Name must not be null!");
-    	}
-    	else
-    		this.diaryName=name;
-    	
-    	return this;
-    }
+    List<ConsumptionImpl> getConsumedDrinks();
 
-    public Diary addConsumption(Consumption c) {
-        if(c==null)
-        	throw new IllegalArgumentException("Consumpton c must not be null!");
-        else{
-        	if (this.consumedDrinks==null)
-        		this.consumedDrinks=new ArrayList<Consumption>();
-        	this.consumedDrinks.add(c);
-        }
-        
-        return this;
-    }
+    Drinker getDrinker();
 
-    public Drinker getDrinker() {
-        return this.theDrinker;
-    }
+    String getName();
+
+    DiaryImpl setConsumedDrinks(List<ConsumptionImpl> consumedDrinks);
+
+    DiaryImpl setDrinker(Drinker d);
+
+    DiaryImpl setName(String name);
     
-    public Diary setDrinker(Drinker d){
-    	if(d==null){
-    		throw new IllegalArgumentException("Drinker d must not be null!");
-    	}
-    	else
-    		this.theDrinker=d;
-    	
-    	return this;
-    }
-    
-    public List<Consumption> getConsumedDrinks(){
-    	if(this.consumedDrinks==null)
-    		return Collections.emptyList();
-    	else
-    		return this.consumedDrinks;
-    }
-    
-    public Diary setConsumedDrinks(List<Consumption> consumedDrinks){
-    	if(consumedDrinks==null){
-    		throw new IllegalArgumentException("List consumedDrinks must not be null!");
-    	}
-    	else
-    		this.consumedDrinks=consumedDrinks;
-    	
-    	return this;
-    }
 }

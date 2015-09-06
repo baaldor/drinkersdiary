@@ -1,4 +1,6 @@
-package drinkerdiary.Core;
+package drinkerdiary.Core.impl;
+
+import drinkerdiary.Core.Unit;
 
 public class Volume extends SimpleMeasure {
 

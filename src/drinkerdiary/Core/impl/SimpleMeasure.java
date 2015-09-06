@@ -1,4 +1,7 @@
-package drinkerdiary.Core;
+package drinkerdiary.Core.impl;
+
+import drinkerdiary.Core.Measurable;
+import drinkerdiary.Core.Unit;
 
 public class SimpleMeasure implements Measurable {
 

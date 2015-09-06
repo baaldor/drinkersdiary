@@ -1,4 +1,7 @@
-package drinkerdiary.Core;
+package drinkerdiary.Core.impl;
+
+import drinkerdiary.Core.AlcoholicSubstance;
+import drinkerdiary.Core.impl.SubstanceImpl;
 
 public class AlcoholicSubstanceImpl extends SubstanceImpl implements AlcoholicSubstance {
 	private double alcStr;

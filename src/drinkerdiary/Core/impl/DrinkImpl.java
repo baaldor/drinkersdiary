@@ -1,4 +1,8 @@
-package drinkerdiary.Core;
+package drinkerdiary.Core.impl;
+
+import drinkerdiary.Core.Drink;
+import drinkerdiary.Core.Recipe;
+import drinkerdiary.Core.impl.Volume;
 
 public class DrinkImpl implements Drink {
     private Recipe theDrinksRecipe;

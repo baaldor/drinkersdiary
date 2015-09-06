@@ -1,5 +1,8 @@
-package drinkerdiary.Core;
+package drinkerdiary.Core.impl;
 
+import drinkerdiary.Core.Ingredient;
+import drinkerdiary.Core.Measurable;
+import drinkerdiary.Core.Recipe;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;

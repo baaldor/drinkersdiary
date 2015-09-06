@@ -3,7 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package drinkerdiary.Core;
+package drinkerdiary.Core.impl;
+
+import drinkerdiary.Core.AlcoholicSubstance;
+import drinkerdiary.Core.Drinker;
+import drinkerdiary.Core.EntityFactory;
+import drinkerdiary.Core.Ingredient;
+import drinkerdiary.Core.Measurable;
+import drinkerdiary.Core.Substance;
+import drinkerdiary.Core.Unit;
+import drinkerdiary.Core.impl.DrinkerImpl;
+import drinkerdiary.Core.impl.IngredientImpl;
+import drinkerdiary.Core.impl.AlcoholicSubstanceImpl;
+import drinkerdiary.Core.impl.Mass;
+import drinkerdiary.Core.impl.Piece;
+import drinkerdiary.Core.impl.SubstanceImpl;
+import drinkerdiary.Core.impl.SimpleMeasure;
+import drinkerdiary.Core.impl.Volume;
 
 /**
  *

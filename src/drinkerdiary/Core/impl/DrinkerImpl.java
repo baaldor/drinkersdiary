@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package drinkerdiary.Core;
+package drinkerdiary.Core.impl;
 
+import drinkerdiary.Core.Drinker;
 import java.util.Collection;
 import java.util.Collections;
 
@@ -14,7 +15,7 @@ import java.util.Collections;
  */
 public class DrinkerImpl implements Drinker {
     private String name;
-    private Collection<Diary> myDiaries;
+    private Collection<DiaryImpl> myDiaries;
 
     public DrinkerImpl() {
         this("A new drinker");
@@ -39,7 +40,7 @@ public class DrinkerImpl implements Drinker {
     }    
 
     @Override
-    public Collection<Diary> getMyDiaries() {
+    public Collection<DiaryImpl> getMyDiaries() {
     	if (this.myDiaries==null) 
     		return Collections.emptySet();
     	else
@@ -47,7 +48,7 @@ public class DrinkerImpl implements Drinker {
     }
 
     @Override
-    public void setMyDiaries(Collection<Diary> myDiaries) {
+    public void setMyDiaries(Collection<DiaryImpl> myDiaries) {
         if(myDiaries==null){
         	throw new IllegalArgumentException("myDiaries must not be null!");
         }

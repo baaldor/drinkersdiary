@@ -5,6 +5,10 @@
  */
 package drinkerdiary.Core;
 
+import drinkerdiary.Core.impl.Mass;
+import drinkerdiary.Core.impl.Piece;
+import drinkerdiary.Core.impl.Volume;
+
 /**
  *
  * @author BaalDor

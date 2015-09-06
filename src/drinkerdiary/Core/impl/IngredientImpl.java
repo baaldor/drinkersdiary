@@ -1,4 +1,8 @@
-package drinkerdiary.Core;
+package drinkerdiary.Core.impl;
+
+import drinkerdiary.Core.Ingredient;
+import drinkerdiary.Core.Measurable;
+import drinkerdiary.Core.Substance;
 
 public class IngredientImpl implements Ingredient {
 	private Substance baseSubstance;

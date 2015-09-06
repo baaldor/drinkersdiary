@@ -1,4 +1,7 @@
-package drinkerdiary.Core;
+package drinkerdiary.Core.impl;
+
+import drinkerdiary.Core.AlcoholicSubstance;
+import drinkerdiary.Core.Substance;
 
 public class AlcoholicSubstanceBridgeImpl implements AlcoholicSubstance{
 	private double doubleAlcoholicStrength;

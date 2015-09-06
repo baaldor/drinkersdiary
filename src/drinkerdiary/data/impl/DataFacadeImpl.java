@@ -3,10 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package drinkerdiary.data;
+package drinkerdiary.data.impl;
 
 import drinkerdiary.Core.Drinker;
 import drinkerdiary.Core.Substance;
+import drinkerdiary.data.DataFacade;
+import drinkerdiary.data.LoadFacade;
+import drinkerdiary.data.PersistenceFacade;
 import java.util.Set;
 
 /**
