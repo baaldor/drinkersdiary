@@ -43,5 +43,12 @@ public class DataFacadeImpl implements DataFacade {
     public Set<String> loadAllSubstanceNames() {
         return this.myLoadFacade.loadAllSubstanceNames();
     }
+
+
+
+	@Override
+	public Substance loadSubstanceByName(String name) {
+		return this.myLoadFacade.loadSubstanceByName(name);
+	}
     
 }
