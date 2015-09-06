@@ -1,6 +1,7 @@
 package drinkerdiary.Core;
 
 public interface Ingredient {
+	public String getName();
 
     public Substance getSubstance();
     public Ingredient setSubstance(Substance s);
