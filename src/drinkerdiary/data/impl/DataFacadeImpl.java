@@ -6,6 +6,7 @@
 package drinkerdiary.data.impl;
 
 import drinkerdiary.Core.Drinker;
+import drinkerdiary.Core.Ingredient;
 import drinkerdiary.Core.Substance;
 import drinkerdiary.data.DataFacade;
 import drinkerdiary.data.LoadFacade;
@@ -45,6 +46,23 @@ public class DataFacadeImpl implements DataFacade {
     @Override
     public Set<String> loadAllSubstanceNames() {
         return this.myLoadFacade.loadAllSubstanceNames();
+    }
+    
+
+
+    @Override
+    public Substance loadSubstanceByName(String name) {
+        return this.myLoadFacade.loadSubstanceByName(name);
+}
+
+    @Override
+    public Set<String> loadAllIngredientNames() {
+        return this.myLoadFacade.loadAllIngredientNames();
+    }
+
+    @Override
+    public Ingredient loadIngredientByName(String name) {
+        return this.myLoadFacade.loadIngredientByName(name);
     }
     
 }

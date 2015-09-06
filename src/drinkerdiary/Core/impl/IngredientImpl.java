@@ -5,6 +5,7 @@ import drinkerdiary.Core.Measurable;
 import drinkerdiary.Core.Substance;
 
 public class IngredientImpl implements Ingredient {
+	private String name;
 	private Substance baseSubstance;
 	private Measurable measurableHowMuchOfSubstance;
 	private boolean isOptional;
@@ -66,6 +67,31 @@ public class IngredientImpl implements Ingredient {
 		this.isOptional=o;
 		
 		return this;
+	}
+
+	public String toString(){
+		String retVal=this.getName();
+		
+		if(retVal!=null && retVal!="")			
+			return retVal;
+		else
+			return super.toString();		
+}
+
+	@Override
+	public String getName() {
+		if(this.name==null || this.name==""){
+			if(this.getSubstance()!=null){
+				String retVal="";
+				retVal=this.getSubstance().getName();
+				if(this.getQuantity()!=null) 
+					retVal+=" "+this.getQuantity().getValue()+" " + this.getQuantity().getUnit().toString();
+				if(this.isOptional()) 
+					retVal+=" (optional)";
+				this.name=retVal;
+			}
+		}
+		return this.name;
 	}
 
 }

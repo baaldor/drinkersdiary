@@ -6,12 +6,11 @@
 package drinkerdiary.data.mock;
 
 import drinkerdiary.Core.Ingredient;
-import drinkerdiary.Core.IngredientImpl;
+import drinkerdiary.Core.impl.IngredientImpl;
 import drinkerdiary.Core.Substance;
-import drinkerdiary.Core.SubstanceImpl;
-import drinkerdiary.Core.Volume;
+import drinkerdiary.Core.impl.SubstanceImpl;
+import drinkerdiary.Core.impl.Volume;
 import drinkerdiary.data.LoadFacade;
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -28,7 +27,7 @@ public class LoadMock implements LoadFacade{
 
     @Override
     public Set<String> loadAllSubstanceNames() {
-        return new HashSet<String>(java.util.Arrays.asList("Milch", "Bier", "Gin"));
+        return new HashSet<>(java.util.Arrays.asList("Milch", "Bier", "Gin"));
     }
 
 	@Override
@@ -43,7 +42,7 @@ public class LoadMock implements LoadFacade{
 
 	@Override
 	public Set<String> loadAllIngredientNames() {
-		return new HashSet<String>(java.util.Arrays.asList("Gin 20 ml (optional)"));
+		return new HashSet<>(java.util.Arrays.asList("Gin 20 ml (optional)"));
 	}
     
 }
